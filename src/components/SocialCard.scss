@@ -1,0 +1,92 @@
+@import '../styles/_colors.scss';
+
+.SocialCard {
+    display: flex;
+    align-items: flex-start;
+    max-width: 600px;
+    padding: 5px;
+    background-color: white;
+
+    div {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .card-header {
+        margin-bottom: 2px;
+    }
+
+    .author-icon-img {
+        border-radius: 50%;
+        height: 49px;
+        width: 49px;
+    } 
+
+    span:not(.author-name) {
+        color: $gray;
+        font-size: 0.9em;
+    }
+
+    span.verified {
+        color: $blue;
+    }
+
+    span.author-handle {
+        margin-left: 6px;
+    }
+
+    .cta-footer {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: color 0.5s;
+        }
+
+        svg {
+            display: block;
+            margin: auto;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            transition: background-color 0.5s;
+        }
+
+        a.comment:hover {
+            color: $blue;
+            .icon {
+                background-color: $bg-blue
+            }
+        }
+
+        a.retweet:hover {
+            color: $green;
+            .icon {
+                background-color: $bg-green
+            }
+        }
+
+        a.like:hover {
+            color: $red;
+            .icon {
+                background-color: $bg-red
+            }
+        }
+
+        a.share:hover {
+            color: $blue;
+            .icon {
+                background-color: $bg-blue
+            }
+        }
+    }
+}

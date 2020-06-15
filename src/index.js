@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import JavascriptTimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCheckCircle, faRetweet } from '@fortawesome/free-solid-svg-icons';
+import { faComment, faHeart, faShareSquare } from '@fortawesome/free-regular-svg-icons';
+
+
+JavascriptTimeAgo.addLocale(en)
+library.add(faCheckCircle, faComment, faRetweet, faHeart, faShareSquare);
 
 ReactDOM.render(
   <React.StrictMode>
